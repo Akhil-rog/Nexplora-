@@ -10,8 +10,8 @@
 <section class="card admin" id="admin"><h2>Organiser Admin</h2><p class="notice">Admin access is restricted to the organiser account.</p><button type="button" id="toggleAdmin" aria-expanded="false">Open Admin Login</button><div class="adminbox" id="adminBox"><form id="loginForm"><label>Admin email<input type="email" name="email" required autocomplete="username"></label><label>Password<input type="password" name="password" required autocomplete="current-password"></label><button type="submit">Sign in</button></form><div id="adminStatus" role="status"></div><div id="dashboard" style="display:none"><div class="button-row"><button id="logoutBtn" type="button">Sign out</button><button id="csvBtn" type="button">Download CSV</button></div><div class="table-wrap"><table><thead><tr><th>Name</th><th>Register No.</th><th>Department</th><th>Year</th><th>Programme</th><th>Phone</th><th>Registered</th></tr></thead><tbody id="records"></tbody></table></div></div></div></section></main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
 // Replace with your Supabase Project URL and Publishable key. Never put a service-role/secret key here.
-const SUPABASE_URL='YOUR_SUPABASE_PROJECT_URL';
-const SUPABASE_ANON_KEY='YOUR_SUPABASE_PUBLISHABLE_KEY';
+const SUPABASE_URL='https://hqjdugvlhalhlchpkwoh.supabase.co';
+const SUPABASE_ANON_KEY='sb_publishable_7HMmkuFrLdfdUyTkWWTVTw_rQNPh-vk;
 const configured=SUPABASE_URL.startsWith('https://')&&!SUPABASE_URL.includes('YOUR_')&&!SUPABASE_ANON_KEY.includes('YOUR_');
 const sb=configured?window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY):null;
 const form=document.getElementById('regForm'),statusEl=document.getElementById('formStatus'),submitBtn=document.getElementById('submitBtn');
